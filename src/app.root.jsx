@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 
 class App extends Component {
 
@@ -9,11 +9,11 @@ class App extends Component {
             <div className="layout">
                 <Grid>
                     <Row className="show-grid">
-                        <Col xs={12} md={8}>
+                        <Col xs={12}>
                             <code>&lt;{'Col xs={12} md={8}'}
                                 /&gt;</code>
                         </Col>
-                        <Col xs={6} md={4}>
+                        <Col xs={12}>
                             <code>&lt;{'Col xs={6} md={4}'}
                                 /&gt;</code>
                         </Col>
