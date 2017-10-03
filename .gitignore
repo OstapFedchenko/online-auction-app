@@ -1,0 +1,10 @@
+
+# dependencies
+/node_modules
+
+# production
+/public/build
+
+
+npm-debug.log*
+.vscode
