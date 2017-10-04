@@ -3,20 +3,12 @@ import {connect} from 'react-redux';
 import {Row, Col} from 'react-bootstrap';
 
 import {Good} from './';
-import goods from '../../../../public/goods.json';
 
 class GridGoods extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            goods
-        };
-    }
-
     render() {
 
-        const {goods} = this.state;
+        const {goods} = this.props;
         console.log(goods);
 
         return (
