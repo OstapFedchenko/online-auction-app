@@ -1,42 +1,42 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Grid, Row, Col} from 'react-bootstrap';
+import { bindActionCreators } from 'redux';
+
+import { Header, Content, Footer } from './components';
+import { fetchGoods } from './state';
+import { goodsApi } from './api';
 
 class App extends Component {
-
+    componentDidMount() {
+		//this.props.storeActions.fetchGoods().catch(() => {
+		//	console.log('Goods didnt load');
+        //});
+        console.log('loading...')
+        goodsApi.fetchGoods();
+    }
+    
     render() {
         return (
-            <div className="layout">
-                <Grid>
-                    <Row className="show-grid">
-                        <Col xs={12}>
-                            <code>&lt;{'Col xs={12} md={8}'}
-                                /&gt;</code>
-                        </Col>
-                        <Col xs={12}>
-                            <code>&lt;{'Col xs={6} md={4}'}
-                                /&gt;</code>
-                        </Col>
-                    </Row>
+                <Grid fluid>
+                    <Header/>
+                    <Content/>
+                    <Footer/>
                 </Grid>
-            </div>
         );
     }
 };
 
-/* const mapStateToProps = ({ goods }) => ({
+const mapStateToProps = ({ goods }) => ({
 	goods
 });
 
 const mapDispatchToProps = dispatch => {
 	return {
 		storeActions: bindActionCreators({
-			fetchEmployees,
-			fetchDepartments
+			fetchGoods
 		}, dispatch)
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App); */
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App); 
