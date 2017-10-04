@@ -8,3 +8,10 @@ export function fetchGoods(payload) {
 		payload
 	};
 }
+
+export function setGoods(payload){
+	return {
+		type: GOODS_FETCH_SUCCEEDED,
+		payload
+	};
+}
