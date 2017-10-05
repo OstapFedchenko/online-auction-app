@@ -4,4 +4,8 @@ function fetchGoods() {
     return Promise.resolve(goods);
 };
 
-export default { fetchGoods };
+function searchGoods(value){
+    return Promise.resolve(value);
+}
+
+export default { fetchGoods, searchGoods };
