@@ -22,7 +22,7 @@ class CategoryList extends Component {
                         )
                     }
                 </ul>
-                <CategoryForm onSubmitHandler={onSubmitHandler}/>
+                <Glyphicon glyph="plus"/>
             </div>
         );
     }

@@ -1,21 +1,36 @@
-import React, {Component} from 'react';
+/*import React, {Component} from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {Modal, ModalBody, ModalHeader, ModalFooter, Glyphicon} from 'react-bootstrap';
 
-class CategoryForm extends Comment {
+class CategoryForm extends Component {
 
-    showModal() {
-        $(this.refs.modal.getDOMNode()).modal();
+    constructor(props) {
+        super(props)
+
+        this.close = this.close.bind(this);
+        this.open = this.open.bind(this);
+
+        this.state = {
+            showModal: false
+        }
+    }
+
+    close() {
+        this.setState({showModal: false})
+    }
+
+    open() {
+        this.setState({showModal: true})
     }
 
     render() {
-        const {isShow, onSubmitHandler} = this.props;
+        const {onSubmitHandler} = this.props;
 
         return (
             <div className="static-modal">
-                
-                <Glyphicon glyph="plus"/>
-                <Modal.Dialog show={isShow}>
+
+                <Glyphicon onClick={this.open} glyph="plus"/>
+                <Modal.Dialog show={this.state.showModal} onHide={this.close}>
                     <Modal.Header>
                         <Modal.Title>Create a new category</Modal.Title>
                     </Modal.Header>
@@ -42,6 +57,8 @@ class CategoryForm extends Comment {
     }
 }
 
-CategoryForm = reduxForm({form: 'category'})(CategoryForm);
 
-export default CategoryForm;
+export default reduxForm({
+    form: 'categoryFrom'
+})(CategoryForm);
+*/
