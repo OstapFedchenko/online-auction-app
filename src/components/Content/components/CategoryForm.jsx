@@ -1,14 +1,25 @@
-/*import React, {Component} from 'react';
-import {Field, reduxForm} from 'redux-form';
-import {Modal, ModalBody, ModalHeader, ModalFooter, Glyphicon} from 'react-bootstrap';
+import React, {Component} from 'react';
+import {
+    Modal,
+    ModalBody,
+    ModalHeader,
+    ModalFooter,
+    Button,
+    Glyphicon
+} from 'react-bootstrap';
+import {Control, Form, actions} from 'react-redux-form';
 
 class CategoryForm extends Component {
 
     constructor(props) {
         super(props)
 
-        this.close = this.close.bind(this);
-        this.open = this.open.bind(this);
+        this.close = this
+            .close
+            .bind(this);
+        this.open = this
+            .open
+            .bind(this);
 
         this.state = {
             showModal: false
@@ -16,11 +27,11 @@ class CategoryForm extends Component {
     }
 
     close() {
-        this.setState({showModal: false})
+        this.setState({showModal: false});
     }
 
     open() {
-        this.setState({showModal: true})
+        this.setState({showModal: true});
     }
 
     render() {
@@ -30,35 +41,30 @@ class CategoryForm extends Component {
             <div className="static-modal">
 
                 <Glyphicon onClick={this.open} glyph="plus"/>
-                <Modal.Dialog show={this.state.showModal} onHide={this.close}>
+                <Modal show={this.state.showModal} onHide={this.close}>
                     <Modal.Header>
                         <Modal.Title>Create a new category</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body>
-                        <form onSubmit={onSubmitHandler}>
-                            <div>
-                                <label htmlFor="categoryName">Name</label>
-                                <Field name="categoryName" component="input" type="text"/>
-                            </div>
+                        <Form model="form.category" onSubmit={(category) => onSubmitHandler(category)}>
+                            <label htmlFor=".name">Category name:</label>
+                            <Control.text model=".name" id="category.id"/>
 
-                            <button type="submit">Submit</button>
-                        </form>
+                            <button type="submit">
+                                Finish!
+                            </button>
+                        </Form>
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <Button onClick={onClose}>Close</Button>
-                        <Button bsStyle="primary">Save</Button>
+                        <Button onClick={this.close}>Close</Button>
+                        <Button type="submit" bsStyle="primary">Save</Button>
                     </Modal.Footer>
-
-                </Modal.Dialog>
+                </Modal>
             </div>
         );
     }
 }
 
-
-export default reduxForm({
-    form: 'categoryFrom'
-})(CategoryForm);
-*/
+export default CategoryForm;

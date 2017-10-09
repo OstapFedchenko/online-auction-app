@@ -4,19 +4,18 @@ import {Row, Col} from 'react-bootstrap';
 import {bindActionCreators} from 'redux';
 
 import {GridGoods, CategoryList} from './';
-import {categoriesApi, goodsApi} from '../../api';
-import {setGoods, setCategories} from '../../state';
+import {fetchGoods, fetchCategories} from '../../state';
 
 class Content extends Component {
 
     componentDidMount() {
-        const {setCategories, setGoods} = this.props.storeActions;
+        const {fetchCategories, fetchGoods} = this.props.storeActions;
 
         console.log('loading goods...');
-        goodsApi.fetchGoods().then(data => {setGoods(data);});
+        fetchGoods();
 
         console.log('loading categories...')
-        categoriesApi.fetchCategories().then(data => {setCategories(data);});
+        fetchCategories();
     }
 
     onSubmitCategoryHandler(event){
@@ -47,8 +46,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
     return {
         storeActions: bindActionCreators({
-            setCategories,
-            setGoods
+            fetchCategories,
+            fetchGoods
         }, dispatch)
     }
 }

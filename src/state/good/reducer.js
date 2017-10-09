@@ -1,6 +1,5 @@
 import {
     GOODS_FETCH_SUCCEEDED,
-    GOODS_SET,
     GOODS_SEARCH
 } from './actions';
 
@@ -13,7 +12,6 @@ function goodReducer(state = initialState, action = {}) {
     switch (type) {
 
         case GOODS_FETCH_SUCCEEDED:
-        case GOODS_SET:
             console.log('Loading goods succesed');
             console.log(`Goods ${payload}`);
             _goods = [...payload];

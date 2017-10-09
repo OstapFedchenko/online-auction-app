@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import {Glyphicon} from 'react-bootstrap';
 
-import CategoryForm from '.';
+import {CategoryForm} from './';
 
 import './CategoryList.less';
 
 class CategoryList extends Component {
-    
-    render() {
 
+    render() {
         const {categories, onSubmitHandler} = this.props;
         
         return (
@@ -22,7 +21,7 @@ class CategoryList extends Component {
                         )
                     }
                 </ul>
-                <Glyphicon glyph="plus"/>
+                <CategoryForm onSubmitHandler={onSubmitHandler}/>
             </div>
         );
     }
