@@ -1,0 +1,1 @@
+export { default as GoodPageInfo } from './GoodPageInfo.jsx';

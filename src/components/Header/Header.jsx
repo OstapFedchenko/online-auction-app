@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {Row, Col} from 'react-bootstrap';
+import { Link } from 'react-router';
 
 import {goodsApi} from '../../api';
 import {searchGoods} from '../../state';
 
-import { Search, NewGood, Login } from './';
+import { Search, Login } from './';
 
 import './Header.less';
 
@@ -28,9 +29,15 @@ class Header extends Component {
         return (
             <header className="header">
                 <Row className="header-component">
-                    <Col xs={2} className="new-good-container"><NewGood/></Col>
-                    <Col xs={7}><Search handler={this.onClickHandler}/></Col>
-                    <Col xs={3} className="login-container"><Login/></Col>
+                    <Col xsPush={2} xs={7}><Search handler={this.onClickHandler}/></Col>
+                    <Col xsPush={2} xs={3} className="login-container"><Login/></Col>
+                    <Col xs={12}>
+                        <ul className="nav nav-tabs">
+                            <li><Link to={"/"} activeClassName="active">Main</Link></li>
+                            <li role="presentation"><a href="#">Profile</a></li>
+                            <li role="presentation"><a href="#">Messages</a></li>
+                        </ul>
+                    </Col>
                 </Row>
             </header>
         );

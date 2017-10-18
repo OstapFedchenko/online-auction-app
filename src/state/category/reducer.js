@@ -1,4 +1,4 @@
-import {CATEGORIES_FETCH_SUCCEEDED} from './actions';
+import {CATEGORIES_FETCH_SUCCEEDED, CATEGORIES_ADD_SUCCEEDED} from './actions';
 
 const initialState = [];
 
@@ -8,9 +8,10 @@ function categoryReducer(state = initialState, action = {}) {
     switch (type) {
 
         case CATEGORIES_FETCH_SUCCEEDED:
-            console.log('Loading categories succesed');
-            console.log(`Categories ${payload}`);
             return [...payload];
+
+        case CATEGORIES_ADD_SUCCEEDED:
+            return [...state, payload];
 
         default:
             return state;

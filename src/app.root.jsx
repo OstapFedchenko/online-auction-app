@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap';
 
 import {Header, Content, Footer} from './components';
 
@@ -9,7 +9,7 @@ class App extends Component {
         return (
             <Grid fluid>
                 <Header/>
-                <Content/>
+                <Content {...this.props}/>
                 <Footer/>
             </Grid>
         );

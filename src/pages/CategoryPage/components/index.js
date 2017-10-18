@@ -1,0 +1,1 @@
+export { default as CategoryPageInfo } from './CategoryPageInfo.jsx';

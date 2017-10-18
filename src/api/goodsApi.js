@@ -4,8 +4,36 @@ function fetchGoods() {
     return Promise.resolve(goods);
 };
 
-function searchGoods(value){
+function addGood(good) {
+    let firstGood = goods[0];
+    let updatedGood = {
+        ...firstGood,        
+        ...good
+    };
+
+    updatedGood.id += updatedGood.name;
+
+    return Promise.resolve(updatedGood);
+}
+
+function updateGood(good){
+    
+    return Promise.resolve(good);
+}
+
+function deleteGood(good){
+
+    return Promise.resolve(good);
+}
+
+function searchGoods(value) {
     return Promise.resolve(value);
 }
 
-export default { fetchGoods, searchGoods };
+export default {
+    fetchGoods,
+    addGood,
+    updateGood,
+    deleteGood,
+    searchGoods
+};

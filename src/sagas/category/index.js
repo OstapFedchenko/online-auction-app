@@ -1,5 +1,7 @@
-import categoriesSaga from './fetchCategoriesSaga';
+import fetchCategoriesSaga from './fetchCategoriesSaga';
+import addCategorySaga from './addCategorySaga';
 
 export default [ 
-	categoriesSaga
+	fetchCategoriesSaga,
+	addCategorySaga
 ];

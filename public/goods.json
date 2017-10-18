@@ -4,7 +4,8 @@
         "name": "Good #1",
         "senderName": "Mark",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "sdfd45asd1",
         "body": "Phasellus tempus. In ac felis quis tortor malesuada pretium. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent adipiscing.Phasellus tempus. In ac felis quis tortor malesuada pretium. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent adipiscing."
     },
     {
@@ -12,7 +13,8 @@
         "name": "Good #2",
         "senderName": "Diana",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "sdfd45asd1",
         "body": "In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Nam commodo suscipit quam. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Aenean commodo ligula eget dolor."
     },
     {
@@ -20,7 +22,8 @@
         "name": "Good #3",
         "senderName": "Hanna",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "sdfd45asd1",
         "body": "Nam pretium turpis et arcu. Praesent congue erat at massa. Etiam ut purus mattis mauris sodales aliquam. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Quisque id odio.Nam pretium turpis et arcu. Praesent congue erat at massa. Etiam ut purus mattis mauris sodales aliquam. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Quisque id odio."
     },
     {
@@ -28,7 +31,8 @@
         "name": "Good #4",
         "senderName": "Mum",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "12126gghh21",
         "body": "Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Morbi vestibulum volutpat enim. Phasellus dolor. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In dui magna, posuere eget, vestibulum et, tempor auctor, justo."
     },
     {
@@ -36,7 +40,8 @@
         "name": "Good #5",
         "senderName": "Max",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "12126gghh21",
         "body": "Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero.Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero."
     },
     {
@@ -44,7 +49,8 @@
         "name": "Good #6",
         "senderName": "Diana",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "gdg544dsd61",
         "body": "In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Nam commodo suscipit quam. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Aenean commodo ligula eget dolor."
     },
     {
@@ -52,7 +58,8 @@
         "name": "Good #7",
         "senderName": "Hanna",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "gdg544dsd61",
         "body": "Nam pretium turpis et arcu. Praesent congue erat at massa. Etiam ut purus mattis mauris sodales aliquam. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Quisque id odio.Nam pretium turpis et arcu. Praesent congue erat at massa. Etiam ut purus mattis mauris sodales aliquam. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Quisque id odio."
     },
     {
@@ -60,7 +67,8 @@
         "name": "Good #8",
         "senderName": "Mum",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "gdhg556jhj21",
         "body": "Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Morbi vestibulum volutpat enim. Phasellus dolor. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In dui magna, posuere eget, vestibulum et, tempor auctor, justo."
     },
     {
@@ -68,7 +76,8 @@
         "name": "Good #9",
         "senderName": "Max",
         "senderEmail": "sender@domain.com",
-        "img": "img/thumbnail.png",
+        "img": "http://127.0.0.1:8090/img/thumbnail.png",
+        "categoryId": "gdhg556jhj21",
         "body": "Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero.Suspendisse eu ligula. Duis lobortis massa imperdiet quam. Proin magna. Fusce fermentum. Mauris sollicitudin fermentum libero."
     }
 ]

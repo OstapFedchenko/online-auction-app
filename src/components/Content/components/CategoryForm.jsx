@@ -7,7 +7,15 @@ import {
     Button,
     Glyphicon
 } from 'react-bootstrap';
-import {Control, Form, actions} from 'react-redux-form';
+import { Field, reduxForm } from 'redux-form';
+
+import {categoriesApi} from '../../../api';
+import {categoryValidation} from './validation';
+import customInput from './InputComponentCustom.jsx';
+
+import './CategoryForm.less';
+
+const checkCategoryNameHandler = categoriesApi.checkCategoryName;
 
 class CategoryForm extends Component {
 
@@ -35,36 +43,43 @@ class CategoryForm extends Component {
     }
 
     render() {
-        const {onSubmitHandler} = this.props;
+        const {onSubmitHandler, handleSubmit, error} = this.props;
+
+        const saveCategoryHandler = (category)=> {
+            this.close();
+            onSubmitHandler(category);
+        };
 
         return (
-            <div className="static-modal">
+            <div className="category-modal">
 
                 <Glyphicon onClick={this.open} glyph="plus"/>
                 <Modal show={this.state.showModal} onHide={this.close}>
+                <form className="category-form" onSubmit={ handleSubmit(saveCategoryHandler) }>
                     <Modal.Header>
                         <Modal.Title>Create a new category</Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body>
-                        <Form model="form.category" onSubmit={(category) => onSubmitHandler(category)}>
-                            <label htmlFor=".name">Category name:</label>
-                            <Control.text model=".name" id="category.id"/>
-
-                            <button type="submit">
-                                Finish!
-                            </button>
-                        </Form>
+                        <Field classInput="form-control" maxLength="30" autoComplete="off" name="name" type="text" component={customInput} label="Name" />
                     </Modal.Body>
 
                     <Modal.Footer>
                         <Button onClick={this.close}>Close</Button>
                         <Button type="submit" bsStyle="primary">Save</Button>
                     </Modal.Footer>
+                </form>
                 </Modal>
             </div>
         );
     }
 }
+
+CategoryForm = reduxForm({
+    form: 'category',
+    validate: categoryValidation
+   /* asyncValidate: checkCategoryNameHandler,
+    asyncBlurFields: ['name']*/
+  })(CategoryForm);
 
 export default CategoryForm;

@@ -3,17 +3,22 @@ import {Row, Col} from 'react-bootstrap';
 
 import {Good} from './';
 
+import './GridGoods.less';
+
 class GridGoods extends Component {
 
     render() {
 
-        const {goods} = this.props;
+        const {goods, onGoodClick} = this.props;
+
         console.log(goods);
 
         if (!Array.isArray(goods) || !goods.length) {
             return (
-                <div>
-                    No data
+                <div className="no-date">
+                    <div>
+                        No data
+                    </div>
                 </div>
             );
         }
@@ -22,13 +27,16 @@ class GridGoods extends Component {
             <Row>
                 {
                     goods.map(good =>
-                     < Good 
+                     <Good 
                         key = { good.id }
                         name = { good.name }
                         author = { good.senderName }
-                        img = { good.img}>
+                        img = { good.img} 
+                        onClickHandler={ onGoodClick }
+                        goodId= { good.id }
+                        >
                         {good.body}
-                        </Good>
+                    </Good>
                     )
                 }
             </Row>
