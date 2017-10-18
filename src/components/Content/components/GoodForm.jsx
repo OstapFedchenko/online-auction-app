@@ -8,10 +8,8 @@ import {
 } from 'react-bootstrap';
 import { Field, reduxForm } from 'redux-form';
 
-import {goodValidation} from './validation';
-import customInput from './InputComponentCustom.jsx';
-import customSelect from './SelectComponentCustom.jsx';
-import customMultipleText from './MultipleTextComponentCustom.jsx';
+import {goodValidation} from '../../validation';
+import {customInput, customSelect, customMultipleText} from '../../CustomComponents';
 
 import { PropTypes } from 'prop-types';
 

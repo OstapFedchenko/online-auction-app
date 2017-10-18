@@ -1,15 +1,15 @@
 const goodValidate = values => {
     const errors = {};
+    const requeredText = 'This field is mandatory';
 
     if (!values.name) 
-        errors.name = 'Fild Name is mondatory';
+        errors.name = requeredText;
     if (!values.senderName) 
-        errors.senderName = 'Fild Name is mondatory';
+        errors.senderName = requeredText;
     if (!values.senderEmail) 
-        errors.senderEmail = 'Fild Name is mondatory';
+        errors.senderEmail = requeredText;
     if (!values.body) 
-        errors.body = 'Fild Name is mondatory';
-
+        errors.body = requeredText;
 
     return errors;
 }

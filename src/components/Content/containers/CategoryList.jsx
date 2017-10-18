@@ -5,7 +5,7 @@ import {Glyphicon} from 'react-bootstrap';
 import { push } from 'react-router-redux';
 
 import {fetchCategories} from '../../../state';
-import {CategoryForm} from './';
+import {CategoryForm} from '../components';
 import {CATEGORY_ROUTE} from '../../../constants';
 
 import './CategoryList.less';

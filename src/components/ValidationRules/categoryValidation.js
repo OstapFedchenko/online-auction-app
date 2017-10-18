@@ -2,7 +2,7 @@ const categoryValidate = values => {
     const errors = {};
     
     if (!values.name) 
-        errors.name = 'Fild Name is mondatory';
+        errors.name = 'This field is mandatory';
     
     return errors;
 }

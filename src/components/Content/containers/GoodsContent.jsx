@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import { reset } from 'redux-form';
 import { push } from 'react-router-redux';
 
-import {GridGoods} from './';
+import {GridGoods} from '../components';
 import {fetchGoods } from '../../../state';
 import {GOOD_ROUTE} from '../../../constants';
 

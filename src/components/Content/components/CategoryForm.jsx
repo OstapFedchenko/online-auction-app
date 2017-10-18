@@ -10,8 +10,8 @@ import {
 import { Field, reduxForm } from 'redux-form';
 
 import {categoriesApi} from '../../../api';
-import {categoryValidation} from './validation';
-import customInput from './InputComponentCustom.jsx';
+import {categoryValidation} from '../../validation';
+import {customInput} from '../../CustomComponents';
 
 import './CategoryForm.less';
 
