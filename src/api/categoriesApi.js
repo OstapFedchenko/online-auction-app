@@ -2,7 +2,11 @@ import categories from '../../public/categories.json';
 import { SubmissionError } from 'redux-form';
 
 function fetchCategories() {
-    return Promise.resolve(categories);
+    return new Promise((resolve) => {
+     setTimeout(() => {
+       resolve(categories);
+     }, 3000);
+   });
 };
 
 function addCategory(category) {

@@ -8,7 +8,7 @@ function* fetchGoods(action) {
         const goods = yield call(goodsApi.fetchGoods);
         yield put({type: GOODS_FETCH_SUCCEEDED, payload: goods});
     } catch (e) {
-        console.error(e);
+        console.log(e);
         yield put({type: GOODS_FETCH_FAILED, payload: e});
     }
 }

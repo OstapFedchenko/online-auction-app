@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Row, Col} from 'react-bootstrap';
 
 import {Good} from './';
+import { loading } from '../../../services';
+import { AppLoader } from '../../../components';
 
 import './GridGoods.less';
 
@@ -17,7 +19,8 @@ class GridGoods extends Component {
             return (
                 <div className="no-date">
                     <div>
-                        No data
+                        {!loading && <p>There are no items created yet</p> }
+                        { loading && <AppLoader></AppLoader>}
                     </div>
                 </div>
             );

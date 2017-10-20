@@ -15,6 +15,7 @@ const customInput = ({
         <label className="control-label col-xs-3" htmlFor={input.name}>{label}</label>
         <Col xs={9}>
           <input className={classInput} {...input} type={type} id={input.name} />
+          
             {touched && error && <span className="error">{error}</span> }
         </Col>
         <div className="clearfix"></div>

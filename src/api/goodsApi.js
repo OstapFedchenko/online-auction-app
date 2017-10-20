@@ -1,7 +1,12 @@
 import goods from '../../public/goods.json';
 
 function fetchGoods() {
-    return Promise.resolve(goods);
+  
+    return new Promise((resolve) => {
+     setTimeout(() => {
+       resolve(goods);
+     }, 3000);
+   });
 };
 
 function addGood(good) {

@@ -8,7 +8,7 @@ import {
 } from 'react-bootstrap';
 import { Field, reduxForm } from 'redux-form';
 
-import {goodValidation} from '../../validation';
+import {goodValidation} from '../../ValidationRules';
 import {customInput, customSelect, customMultipleText} from '../../CustomComponents';
 
 import { PropTypes } from 'prop-types';

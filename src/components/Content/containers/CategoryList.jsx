@@ -5,8 +5,9 @@ import {Glyphicon} from 'react-bootstrap';
 import { push } from 'react-router-redux';
 
 import {fetchCategories} from '../../../state';
-import {CategoryForm} from '../components';
+import { CategoryForm, AppLoader } from '../../../components';
 import {CATEGORY_ROUTE} from '../../../constants';
+import { loading } from '../../../services';
 
 import './CategoryList.less';
 
@@ -20,6 +21,17 @@ class CategoryList extends Component {
 
     render() {
         const {categories, onSubmitCategory, onCategoryClick} = this.props;
+
+        if (!Array.isArray(categories) || !categories.length) {
+            return (
+                <div className="no-date">
+                    <div>
+                        {!loading && <p>There are no items created yet</p> }
+                        { loading && <AppLoader></AppLoader>}
+                    </div>
+                </div>
+            );
+        }
 
         return (
             <div className="category-wrapper">

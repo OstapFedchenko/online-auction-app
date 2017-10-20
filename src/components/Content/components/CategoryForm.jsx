@@ -10,7 +10,7 @@ import {
 import { Field, reduxForm } from 'redux-form';
 
 import {categoriesApi} from '../../../api';
-import {categoryValidation} from '../../validation';
+import {categoryValidation} from '../../ValidationRules';
 import {customInput} from '../../CustomComponents';
 
 import './CategoryForm.less';
@@ -22,15 +22,12 @@ class CategoryForm extends Component {
     constructor(props) {
         super(props)
 
-        this.close = this
-            .close
-            .bind(this);
-        this.open = this
-            .open
-            .bind(this);
+        this.close = this.close.bind(this);
+        this.open = this.open.bind(this);
 
         this.state = {
-            showModal: false
+            showModal: false,
+            name: ''
         }
     }
 
@@ -61,7 +58,7 @@ class CategoryForm extends Component {
                     </Modal.Header>
 
                     <Modal.Body>
-                        <Field classInput="form-control" maxLength="30" autoComplete="off" name="name" type="text" component={customInput} label="Name" />
+                        <Field classInput="form-control" name="name" type="text" component={customInput} label="Name" />
                     </Modal.Body>
 
                     <Modal.Footer>
