@@ -1,5 +1,17 @@
 {
-  "name": "my-app",
+  "description": "First step to creatin internet auction on React and Redux",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OstapFedchenko/online-auction-app.git"
+  },
+  "author": "Ostap Fedchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OstapFedchenko/online-auction-app/issues"
+  },
+  "homepage": "https://github.com/OstapFedchenko/online-auction-app#readme",
+  "name": "online-auction",
   "version": "0.1.0",
   "private": true,
   "scripts": {
