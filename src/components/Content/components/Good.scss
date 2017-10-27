@@ -1,0 +1,39 @@
+@import './../../../styles-common.scss';
+
+.good-item{
+    width: 22%;
+    margin: 0px 10px 10px 0;
+    padding: 10px;
+
+    @include respond-to(xs){
+        width: 90%;
+        margin: 10px;
+    }
+
+    @include respond-to(sm) {
+        width: 48%;
+    }
+
+    h3{
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .good-author{
+        text-align: right;
+        margin: 15px 10px;
+        font-style: italic
+    }
+
+    .good-content{
+        overflow: hidden; 
+        padding: 5px;
+        text-overflow: ellipsis; 
+        //height: 150px;
+        
+        line-height: 1.2em;
+        max-height: 7.8em;
+    }
+}

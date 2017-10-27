@@ -1,0 +1,40 @@
+@import url(~normalize.css/normalize.css);
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.header {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .header .header-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline; }
+    .header .header-conteiner .search-control {
+      width: 50%; }
+      @media only screen and (max-width: 767px) {
+        .header .header-conteiner .search-control {
+          width: 90%; } }
+    .header .header-conteiner .empty-control,
+    .header .header-conteiner .login-control {
+      width: 20%; }
+      @media only screen and (max-width: 767px) {
+        .header .header-conteiner .empty-control,
+        .header .header-conteiner .login-control {
+          margin-top: 20px; } }
+    .header .header-conteiner .navigation {
+      width: 100%;
+      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.075); }
+      .header .header-conteiner .navigation .main-menu > div {
+        display: inline-block; }

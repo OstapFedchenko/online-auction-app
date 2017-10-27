@@ -1,0 +1,18 @@
+@import './../../../styles-common.scss';
+
+.grid-goods-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    @include respond-to(xs){
+        justify-content: space-around;
+    }
+}
+
+.new-good-container,
+.no-date{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}

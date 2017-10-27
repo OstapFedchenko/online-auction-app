@@ -1,0 +1,41 @@
+@import './../../styles-common.scss';
+
+.header{
+    margin-top:15px;
+    margin-bottom:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    
+    .header-conteiner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+
+        .search-control{
+            width: 50%;
+
+            @include respond-to(xs) {
+                width: 90%;
+            }
+        }
+
+        .empty-control,
+        .login-control{
+            width: 20%;
+            
+            @include respond-to(xs) {
+                margin-top: 20px;
+            }
+        }
+
+        .navigation{
+            width: 100%;
+            box-shadow: 0 4px 2px -2px rgba(0,0,0,.075);
+
+            .main-menu > div{
+                display: inline-block;
+            }
+        }
+    }
+}

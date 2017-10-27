@@ -1,0 +1,37 @@
+@import "~normalize.css/normalize.css";
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+    
+body {
+     font-family: Roboto, sans-serif;
+     box-sizing: border-box;
+     width: 100%;
+     max-width: 100%;
+     overflow-x: hidden;     
+     
+}
+
+$break-small: 320px;
+$break-landscape: 768px;
+$break-medium: 1024px;
+$additionForSmall: 50px;
+
+
+@mixin respond-to($media) {
+  @if $media == xxs {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == xs {
+    @media only screen and (max-width: $break-landscape - 1) { @content; }
+  }
+  @else if $media ==  sm { 
+    @media only screen and (min-width: $break-landscape + 1) and (max-width: $break-medium - 1) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $break-medium + 1) { @content; }  
+  }
+}

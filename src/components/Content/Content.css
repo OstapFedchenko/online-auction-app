@@ -1,0 +1,39 @@
+@import url(~normalize.css/normalize.css);
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.content {
+  display: flex;
+  flex-wrap: wrap; }
+  .content .good-actions {
+    width: 100%;
+    margin: 10px 0px; }
+    .content .good-actions .good-modal {
+      text-align: center; }
+  .content .sidebar {
+    width: 15%; }
+    @media only screen and (max-width: 767px) {
+      .content .sidebar {
+        width: 100%; } }
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+      .content .sidebar {
+        width: 30%; } }
+  .content .layout {
+    width: 80%;
+    margin-left: 2%; }
+    @media only screen and (max-width: 767px) {
+      .content .layout {
+        width: 100%;
+        margin-left: 0; } }
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+      .content .layout {
+        width: 60%; } }
