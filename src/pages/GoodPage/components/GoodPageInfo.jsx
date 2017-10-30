@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {RaisedButton, Paper, FontIcon} from 'material-ui';
-import Image from 'material-ui-image';
 
 import {EditGoodForm } from '../../../components/Content';
 import tempImg from '../../../temporarry/img/thumbnail.png';
@@ -69,7 +68,7 @@ class GoodPageInfo extends Component{
                 </section>
                 
                 <Paper className="good-img">
-                    <Image src={tempImg}/>
+                    <img className="img" src={tempImg} alt="good img"/>
                 </Paper>
                 
                 <Paper className="good-info">

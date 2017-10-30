@@ -12,8 +12,16 @@ class SearchPage extends Component {
 
     componentDidMount() {
         const {searchGoods} = this.props.storeActions;
-
+        debugger;
         searchGoods(this.props.params.value);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.value !== this.props.params.value) {
+            const {searchGoods} = this.props.storeActions;
+         
+            searchGoods(nextProps.value);
+        }
     }
 
     render() {

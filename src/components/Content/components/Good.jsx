@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Image from 'material-ui-image';
 import {RaisedButton, Paper} from 'material-ui';
 
 import tempImg from '../../../temporarry/img/thumbnail.png'
@@ -12,7 +11,7 @@ class Good extends Component {
 
         return (
             <Paper className="good-item">
-                <Image src={tempImg}/>
+                <img className="img" src={tempImg} alt="good img"/>
 
                 <h3>{name}</h3>
                 <p className="good-content">{this.props.children}</p>

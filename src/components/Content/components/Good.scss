@@ -1,4 +1,4 @@
-@import './../../../styles-common.scss';
+@import './../../../common/mixins.scss';
 
 .good-item{
     width: 22%;
@@ -19,6 +19,10 @@
         font-weight: 400;
         text-align: center;
         margin: 10px;
+    }
+
+    .img {
+        width: 100%;
     }
 
     .good-author{

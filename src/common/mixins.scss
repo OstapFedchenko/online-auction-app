@@ -1,20 +1,3 @@
-@import "~normalize.css/normalize.css";
-
-html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-    
-body {
-     font-family: Roboto, sans-serif;
-     box-sizing: border-box;
-     width: 100%;
-     max-width: 100%;
-     overflow-x: hidden;     
-     
-}
-
 $break-small: 320px;
 $break-landscape: 768px;
 $break-medium: 1024px;

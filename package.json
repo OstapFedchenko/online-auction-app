@@ -27,7 +27,6 @@
     "halogen": "^0.2.0",
     "jquery": "*",
     "material-ui": "^0.19.4",
-    "material-ui-image": "^2.1.1",
     "material-ui-search-bar": "^0.4.0",
     "node-sass-chokidar": "0.0.3",
     "normalize.css": "^7.0.0",

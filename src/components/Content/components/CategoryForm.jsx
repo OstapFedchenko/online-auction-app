@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {Dialog, FlatButton, RaisedButton} from 'material-ui';
 import {Field, reduxForm} from 'redux-form';
 
-import {categoriesApi} from '../../../api';
+//import {categoriesApi} from '../../../api';
 import {categoryValidation} from '../../ValidationRules';
 import {renderTextField} from '../../CustomComponents';
 
-const checkCategoryNameHandler = categoriesApi.checkCategoryName;
+//const checkCategoryNameHandler = categoriesApi.checkCategoryName;
 
 class CategoryForm extends Component {
 

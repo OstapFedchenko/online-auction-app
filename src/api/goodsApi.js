@@ -62,7 +62,7 @@ function searchGoods(value) {
 
                 return searchValue.indexOf(value) !== -1;
             });
-            
+            debugger;
             resolve(filteredGoods);
         }, 1000);
     });

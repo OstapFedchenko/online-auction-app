@@ -11,7 +11,7 @@ import {store, history} from './context';
 import {GoodsContent} from './components/Content';
 import {NotFoundPage, GoodPage, CategoryPage, SearchPage} from './pages';
 
-import './styles-common.css';
+import './common/styles-common.css';
 
 ReactDOM.render(
     <MuiThemeProvider>
