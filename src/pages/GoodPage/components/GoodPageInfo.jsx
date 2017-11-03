@@ -96,7 +96,7 @@ class GoodPageInfo extends Component{
 
                     { !!good && <EditGoodForm {...editFormProps} /> }
                     
-                    <FontIcon className="material-icons" style={iconStyles} onClick={onDeleteGoodHandler}>delete</FontIcon>
+                    <FontIcon className="material-icons remove" style={iconStyles} onClick={onDeleteGoodHandler}>delete</FontIcon>
                 </Paper> 
 
                 <div className="description">
