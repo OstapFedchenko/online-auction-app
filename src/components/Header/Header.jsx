@@ -17,10 +17,8 @@ class Header extends Component {
     }
     
     onClickHandler(value) {
-       let correctedValue = value.toLowerCase();
-  
-       correctedValue
-       ? this.props.onSearchSubmit(correctedValue)
+       value
+       ? this.props.onSearchSubmit(value)
        :  this.props.goToDefault();;
     }
 

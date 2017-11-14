@@ -12,7 +12,7 @@ class SearchPage extends Component {
 
     componentDidMount() {
         const {searchGoods} = this.props.storeActions;
-        debugger;
+
         searchGoods(this.props.params.value);
     }
 

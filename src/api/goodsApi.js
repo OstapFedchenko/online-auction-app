@@ -1,72 +1,54 @@
-import goods from '../temporarry/goods.json';
+import axios from 'axios';
+
+import {API_URL, GOOD_API_URL} from '../constants/';
 
 function fetchGoods() {
-
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(goods);
-        }, 2000);
-    });
+    return axios
+        .get(GOOD_API_URL)
+        .then(result => result.data);
 };
 
 function getGood(goodId) {
 
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            let good = goods.find(good => good.id.toString() === goodId.toString());
-
-            resolve(good);
-        }, 1000);
-    });
+    return axios
+        .get(`${GOOD_API_URL}${goodId}`)
+        .then(result => result.data);
 };
 
 function getGoodsForCategory(categoryId) {
 
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            let categoryGoods = goods.filter(good => good.categoryId.toString() === categoryId.toString());
-
-            resolve(categoryGoods);
-        }, 1000);
-    });
+    return axios
+        .get(`${API_URL}goods?categoryId=${categoryId}`)
+        .then(result => result.data);
 };
 
 function addGood(good) {
-    let firstGood = goods[0];
-    let updatedGood = {
-        ...firstGood,
-        ...good
-    };
 
-    updatedGood.id += updatedGood.name;
-
-    return Promise.resolve(updatedGood);
-}
+    return axios
+        .post(GOOD_API_URL, good)
+        .then(result => result.data);
+};
 
 function updateGood(good) {
 
-    return Promise.resolve(good);
-}
+    return axios
+        .put(`${GOOD_API_URL}${good.id}`, good)
+        .then(result => result.data);
+};
 
 function deleteGood(good) {
 
-    return Promise.resolve(good);
-}
+    return axios
+        .delete(`${GOOD_API_URL}${good.id}`)
+        .then(result => result.data);
+};
 
 function searchGoods(value) {
 
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            let filteredGoods = goods.filter(item => {
-                let searchValue = item.name.toLowerCase();
-
-                return searchValue.indexOf(value) !== -1;
-            });
-
-            resolve(filteredGoods);
-        }, 1000);
-    });
-}
+    return axios
+        .get(`${API_URL}goods?name_like=${value}`)
+        .then(result => result.data);
+};
 
 export default {
     fetchGoods,

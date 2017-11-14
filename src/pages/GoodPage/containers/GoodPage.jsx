@@ -20,7 +20,7 @@ class GoodPage extends Component{
 
     componentDidMount() {
         const { getGood } = this.props.storeActions;
-        
+
         getGood(this.props.params.id);
     }
 
@@ -33,7 +33,7 @@ class GoodPage extends Component{
 
 	onDeleteGoodHandler(good) {
         this.props.storeActions.deleteGood(this.props.good);
-        this.props.goToDefault();
+       // this.props.goToDefault();
     }
     
     render() {

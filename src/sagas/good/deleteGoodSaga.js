@@ -5,8 +5,8 @@ import {GOOD_DELETE_REQUESTED, GOOD_DELETE_SUCCEEDED, GOOD_DELETE_FAILED} from '
 function* deleteGood(action) {
 
     try {
-        const good = yield call(goodsApi.updateGood, action.payload);
-        yield put({type: GOOD_DELETE_SUCCEEDED, payload: good, meta: action.meta});
+        yield call(goodsApi.deleteGood, action.payload);
+        yield put({type: GOOD_DELETE_SUCCEEDED, payload: action.good, meta: action.meta});
     } catch (e) {
         console.error(e);
         yield put({type: GOOD_DELETE_FAILED, payload: e, error: true, meta: action.meta});

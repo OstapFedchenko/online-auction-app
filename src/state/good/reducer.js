@@ -69,7 +69,7 @@ function goodReducer(state = initialState, action = {}) {
             return _goodStore;
 
         case GOOD_UPDATE_SUCCEEDED:
-
+            
             _goodStore = {
                 ...state,
                 goods: state
@@ -78,11 +78,13 @@ function goodReducer(state = initialState, action = {}) {
                         if (item.id !== payload.id) {
                             return item;
                         }
+                        
                         return {
                             ...item,
                             ...payload
                         };
-                    })
+                    }),
+                selectedGood: payload
             };
 
             return _goodStore;

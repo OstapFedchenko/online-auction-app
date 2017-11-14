@@ -1,18 +1,17 @@
-import categories from '../temporarry/categories.json';
+import axios from 'axios';
+
+import {CATEGORY_API_URL} from '../constants/';
 
 function fetchCategories() {
-    return new Promise((resolve) => {
-     setTimeout(() => {
-       resolve(categories);
-     }, 2000);
-   });
+    return axios
+        .get(CATEGORY_API_URL)
+        .then(result => result.data);
 };
 
 function addCategory(category) {
-    let updatedCategory = Object.assign({}, category);
-    updatedCategory.id = updatedCategory.name + '732';
-
-    return Promise.resolve(updatedCategory);
+    return axios
+        .post(CATEGORY_API_URL, category)
+        .then(res => res.data);
 };
 
 /*function checkCategoryName(name) {
