@@ -1,4 +1,4 @@
-import {CATEGORIES_FETCH_REQUESTED, CATEGORIES_ADD_REQUESTED, fetchCategories, addCategory} from './actions';
+import {CATEGORIES_FETCH_REQUESTED, CATEGORIES_ADD_REQUESTED, fetchCategories, addCategory} from './';
 
 describe('category actions', () => {
 

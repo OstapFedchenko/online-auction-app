@@ -6,7 +6,7 @@ import {
     GOOD_DELETE_SUCCEEDED,
     GOOD_UPDATE_SUCCEEDED,
     GOODS_SEARCH_SUCCEEDED
-} from './actions';
+} from './';
 
 const initialState = {
     goods: [],

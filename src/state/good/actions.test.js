@@ -13,7 +13,7 @@ import {
     updateGood,
     deleteGood,
     searchGoods
-} from './actions';
+} from './';
 
 describe('Good actions', () => {
 

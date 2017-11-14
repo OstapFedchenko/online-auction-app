@@ -6,7 +6,7 @@ import {
     GOOD_DELETE_SUCCEEDED,
     GOOD_UPDATE_SUCCEEDED,
     GOODS_SEARCH_SUCCEEDED
-} from './actions';
+} from './';
 import goodReducer from './reducer';
 
 const goodsArray = [
@@ -117,7 +117,7 @@ describe('Test good reducer', () => {
         };
 
         const expectedState = {
-            selectedGood: null,
+            selectedGood: action.payload,
             goods: stateWithGoods
                 .goods
                 .map((item) => {

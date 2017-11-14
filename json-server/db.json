@@ -2,7 +2,7 @@
   "goods": [
     {
       "id": "sdfd45asd",
-      "name": "Good #1",
+      "name": "Good #12",
       "senderName": "Mark",
       "senderEmail": "sender@domain.com",
       "img": "http://127.0.0.1:8090/img/thumbnail.png",
@@ -89,6 +89,15 @@
       "img": "",
       "body": "dsfdsfdsfd fdsfdsf sdfd",
       "categoryId": "12df6gghh21"
+    },
+    {
+      "id": "H1p90r_yf",
+      "name": "Test after Refact",
+      "senderName": "Ostap",
+      "senderEmail": "ostap@mail.ru",
+      "img": "",
+      "body": "New good with separeta actions and actions creators",
+      "categoryId": "sdfd45asd1"
     }
   ],
   "categories": [
@@ -131,6 +140,10 @@
     {
       "name": "Test axios",
       "id": "r1fjs-dJz"
+    },
+    {
+      "name": "New Category",
+      "id": "rJ-PCHuyG"
     }
   ]
 }

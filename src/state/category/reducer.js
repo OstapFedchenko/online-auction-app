@@ -1,4 +1,4 @@
-import {CATEGORIES_FETCH_SUCCEEDED, CATEGORIES_ADD_SUCCEEDED} from './actions';
+import {CATEGORIES_FETCH_SUCCEEDED, CATEGORIES_ADD_SUCCEEDED} from './';
 
 const initialState = [];
 
