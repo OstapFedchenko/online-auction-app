@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "firstName": "Ostap",
+      "lastName": "Fedchenko",
+      "email": "ostap@mail.ru",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": "ByEJvljJG"
+    }
+  ],
   "goods": [
     {
       "id": "sdfd45asd",

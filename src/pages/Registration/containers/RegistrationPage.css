@@ -1,0 +1,24 @@
+.signup-page {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+  .signup-page .header {
+    display: flex;
+    width: 50%;
+    margin: 0 auto; }
+    .signup-page .header .left-section,
+    .signup-page .header .right-section {
+      width: 50%; }
+    .signup-page .header .right-section {
+      text-align: right;
+      margin-right: 30px;
+      color: #00bcd4;
+      font-size: 17px;
+      font-weight: bold; }
+      .signup-page .header .right-section span:first-child {
+        margin-right: 10px; }
+  .signup-page .content {
+    max-width: 30%;
+    margin: 0 auto;
+    padding: 30px; }

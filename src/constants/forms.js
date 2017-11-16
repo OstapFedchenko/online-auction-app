@@ -7,8 +7,9 @@ export const FORM_NAMES = {
 	CREATE_CATEGORY: 'FORM::CREATE_CATEGORY',
 	EDIT_CATEGORY: 'FORM::EDIT_CATEGORY',
 	CREATE_GOOD: 'FORM::CREATE_GOOD',
-	EDIT_GOOD: 'FORM::EDIT_GOOD'
-}
+	EDIT_GOOD: 'FORM::EDIT_GOOD',
+	CREATE_SIGNUP_USER: 'FORM::CREATE_SIGNUP_USER'
+};
 
 export const CATEGORY_FORM_FIELDS = {
 	ID: 'id',
@@ -23,4 +24,12 @@ export const GOOD_FORM_FIELDS = {
 	CATEGORY_ID: 'categoryId',
     BODY: 'body',
     IMG: 'img'
-}
+};
+
+export const USER_REGISTRATION_FORM_FIELDS = {
+	FIRST_NAME: 'firstName',
+	LAST_NAME: 'lastName',
+	EMAIL: 'email',
+	PASSWORD: 'password',
+	CONFIRM_PASSWORD:'confirmPassword'
+};

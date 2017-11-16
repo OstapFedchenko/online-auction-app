@@ -1,0 +1,10 @@
+.registration-form {
+  padding: 10px;
+  text-align: center; }
+  .registration-form h2 {
+    margin-bottom: 0;
+    color: #00bcd4; }
+  .registration-form .field-width {
+    width: 60% !important; }
+  .registration-form .button-line {
+    margin: 12px 0; }

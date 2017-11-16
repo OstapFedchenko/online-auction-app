@@ -15,6 +15,14 @@ export const goodProp = PropTypes.shape({
 	categoryId: PropTypes.string
 });
 
+export const signUpUserProp = PropTypes.shape({
+	firstName: PropTypes.string.isRequired,
+	lastName: PropTypes.string.isRequired,
+	email: PropTypes.string.isRequired,
+	password: PropTypes.string.isRequired
+});
+
+export const signUpUserRequiredProp = signUpUserProp.isRequired;
 export const categoryRequiredProp = categoryProp.isRequired;
 export const goodRequiredProp = goodProp.isRequired;
 export const categoryArrayRequiredProp = PropTypes.arrayOf(categoryProp).isRequired;

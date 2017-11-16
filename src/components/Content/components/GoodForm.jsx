@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import {PropTypes} from 'prop-types';
 import {Dialog, FlatButton, RaisedButton, MenuItem, FontIcon} from 'material-ui';
 import {Field, reduxForm} from 'redux-form';
 
 import {goodValidation} from '../../ValidationRules';
 import {renderTextField, renderSelectField} from '../../CustomComponents';
-import {PropTypes} from 'prop-types';
 import {FORM_NAMES, FORM_MODES, GOOD_FORM_FIELDS, goodProp} from '../../../constants';
 
 const customContentStyle = {
