@@ -22,6 +22,12 @@ export const signUpUserProp = PropTypes.shape({
 	password: PropTypes.string.isRequired
 });
 
+export const loginUserProp = PropTypes.shape({
+	email: PropTypes.string.isRequired,
+	password: PropTypes.string.isRequired
+});
+
+export const loginUserRequiredProp = loginUserProp.isRequired;
 export const signUpUserRequiredProp = signUpUserProp.isRequired;
 export const categoryRequiredProp = categoryProp.isRequired;
 export const goodRequiredProp = goodProp.isRequired;

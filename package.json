@@ -25,6 +25,7 @@
     "json-server": "node ./json-server/server.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "halogen": "^0.2.0",
     "jquery": "*",
     "material-ui": "^0.19.4",

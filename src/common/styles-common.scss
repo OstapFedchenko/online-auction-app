@@ -1,4 +1,5 @@
 @import "~normalize.css/normalize.css";
+@import "./colors.scss";
 
 html {
     width: 100%;
@@ -13,4 +14,51 @@ body {
      max-width: 100%;
      overflow-x: hidden;     
      
+     .error{
+         color: $errorColor;
+     }
+
+     .public-layout{
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        
+        .content{
+            max-width: 30%;
+            margin: 0 auto;
+            padding: 30px;
+
+            .registration-form,
+            .login-form{
+                padding: 10px;
+                text-align: center;
+            
+                h2{
+                    margin-bottom: 0;
+                    color: $mainColor;
+                }
+            
+                .field-width{
+                    width: 60% !important;
+                }
+            
+                .button-line{
+                    margin: 12px 0;
+                }
+            
+                .error{
+                    margin: 10px 0;
+                }
+
+                .addition-link{
+                    margin: 20px 0;
+
+                    a{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+     }
 }

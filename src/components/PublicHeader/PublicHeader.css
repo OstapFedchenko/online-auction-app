@@ -1,0 +1,16 @@
+.public-header {
+  display: flex;
+  width: 50%;
+  margin: 0 auto; }
+  .public-header .left-section,
+  .public-header .right-section {
+    width: 50%; }
+  .public-header .right-section {
+    text-align: right;
+    margin-right: 30px;
+    font-size: 17px;
+    font-weight: bold; }
+    .public-header .right-section a {
+      color: #00bcd4; }
+    .public-header .right-section span:first-child {
+      margin-right: 10px; }

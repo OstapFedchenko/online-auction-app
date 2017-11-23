@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import { Card, RaisedButton } from 'material-ui';
 import {Field, reduxForm} from 'redux-form';
+import { Link } from 'react-router';
 import {PropTypes} from 'prop-types';
 
 import {renderTextField, signupValidation} from '../../../components';
 import {FORM_NAMES, USER_REGISTRATION_FORM_FIELDS, signUpUserProp} from '../../../constants';
-
-import './RegistrationForm.css';
+import { AppLoader } from '../../../components';
 
 class RegistrationForm extends Component{
 
     render(){
-        const {onSubmitHandler, handleSubmit} = this.props;
+        const {loader, error, onSubmitHandler, handleSubmit} = this.props;
 
         return(
                 <Card>
@@ -24,8 +24,18 @@ class RegistrationForm extends Component{
                         <Field className="field-width" name="password" component={renderTextField} type="password" label="Password"/>
                         <Field className="field-width" name="confirmPassword" component={renderTextField} type="password" label="Confirm Password"/>
 
+                        <div className="error">
+                            {error && <span>{error}</span>}
+                        </div>
+                        
                         <div className="button-line">
-                            <RaisedButton type="submit" label="CREATE NEW ACCOUNT" primary />
+                            <RaisedButton type="submit" label="CREATE NEW ACCOUNT" disabled={loader} primary />
+                        </div>
+
+                        { loader && <AppLoader></AppLoader>}
+
+                        <div className="addition-link">
+                            Already have an account? <Link to={"/login"}>Log in</Link>
                         </div>
                     </form>
                 </Card>

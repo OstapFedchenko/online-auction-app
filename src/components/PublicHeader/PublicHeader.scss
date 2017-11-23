@@ -1,0 +1,26 @@
+.public-header{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    
+    .left-section,
+    .right-section{
+        width: 50%;
+    }
+
+    .right-section{
+        text-align: right;
+        margin-right: 30px;
+       
+        font-size: 17px;
+        font-weight: bold;
+
+        a{
+            color:rgb(0, 188, 212);
+        }
+
+        span:first-child{
+            margin-right: 10px;
+        }
+    }
+}

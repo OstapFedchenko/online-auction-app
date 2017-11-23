@@ -3,23 +3,25 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {push} from 'react-router-redux';
 
-import {RegistrationForm} from '../components';
+import {LoginForm} from '../components';
 import {DEFAULT_ROUTE} from '../../../constants';
-import {addUser} from '../../../state';
+import {loginUser} from '../../../state';
 import { loading } from '../../../services';
 
-class RegistrationPage extends Component {
+class LoginPage extends Component {
     constructor(props) {
         super(props);
 
-        this.onSubmitRegistrationHandler = this
-            .onSubmitRegistrationHandler
+        this.onSubmitLoginHandler = this
+            .onSubmitLoginHandler
             .bind(this);
     }
 
-    onSubmitRegistrationHandler(user) {
+    onSubmitLoginHandler(user) {
+        console.log(user);
 
-        return this.props.storeActions.addUser(user).then(result => {
+        return this.props.storeActions.loginUser(user).then(result => {
+
                 if (result != null) {
                     localStorage.setItem(result.id, result.authenticationToken);
                     this.props.goToDefault();
@@ -29,7 +31,10 @@ class RegistrationPage extends Component {
 
     render() {
         const {loading} = this.props;
-        return (<RegistrationForm loader={loading} onSubmitHandler={this.onSubmitRegistrationHandler}/>);
+
+        return (
+            <LoginForm loader={loading} onSubmitHandler={this.onSubmitLoginHandler} />
+        );
     }
 }
 
@@ -40,10 +45,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => {
     return {
         storeActions: bindActionCreators({
-            addUser
+            loginUser
         }, dispatch),
         goToDefault: () => dispatch(push(`${DEFAULT_ROUTE}`))
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegistrationPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

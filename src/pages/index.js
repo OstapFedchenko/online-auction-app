@@ -3,3 +3,4 @@ export * from './GoodPage';
 export * from './CategoryPage';
 export * from './SearchPage';
 export * from './Registration';
+export * from './Login';

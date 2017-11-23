@@ -14,11 +14,11 @@
         .header .header-conteiner .search-control {
           width: 90%; } }
     .header .header-conteiner .empty-control,
-    .header .header-conteiner .login-control {
+    .header .header-conteiner .logout-control {
       width: 20%; }
       @media only screen and (max-width: 767px) {
         .header .header-conteiner .empty-control,
-        .header .header-conteiner .login-control {
+        .header .header-conteiner .logout-control {
           margin-top: 20px; } }
     .header .header-conteiner .navigation {
       width: 100%;

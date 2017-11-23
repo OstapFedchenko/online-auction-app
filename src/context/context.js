@@ -10,7 +10,6 @@ import rootSaga from '../sagas/rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 const rountingMiddleware = routerMiddleware(browserHistory);
-
 export const store = createStore(
     rootReducer,
     composeWithDevTools(

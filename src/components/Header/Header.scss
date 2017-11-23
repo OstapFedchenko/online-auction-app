@@ -22,7 +22,7 @@
         }
 
         .empty-control,
-        .login-control{
+        .logout-control{
             width: 20%;
             
             @include respond-to(xs) {

@@ -9,7 +9,11 @@ import {
 	GOOD_DELETE_REQUESTED,
 	GOOD_UPDATE_REQUESTED,
 	GOODS_GET_FOR_CATEGORY_REQUESTED,
-	GOODS_SEARCH_REQUESTED
+	GOODS_SEARCH_REQUESTED,
+	USERS_GET_REQUESTED,
+	USERS_ADD_REQUESTED,
+	USERS_LOGIN_REQUESTED,
+	USERS_LOGOUT_REQUESTED
 } from '../state';
 
 function isAnyFetchLoading(state) {
@@ -18,7 +22,11 @@ function isAnyFetchLoading(state) {
 		|| isPending(state, GOODS_FETCH_REQUESTED)
 		|| isPending(state, GOODS_GET_REQUESTED)
 		|| isPending(state, GOODS_GET_FOR_CATEGORY_REQUESTED)
-		|| isPending(state, GOODS_SEARCH_REQUESTED);
+		|| isPending(state, GOODS_SEARCH_REQUESTED)
+		|| isPending(state, USERS_GET_REQUESTED)
+		|| isPending(state, USERS_ADD_REQUESTED)
+		|| isPending(state, USERS_LOGIN_REQUESTED)
+		|| isPending(state, USERS_LOGOUT_REQUESTED);
 }
 
 function isAnyGoodActionLoading(state) {
@@ -32,6 +40,13 @@ function isAnyCategoryActionLoading(state) {
 	return isPending(state, CATEGORIES_ADD_REQUESTED);
 }
 
-const loading = { isAnyFetchLoading, isAnyGoodActionLoading, isAnyCategoryActionLoading };
+function isAnyUserActionLoading(state){
+	return isPending(state, USERS_GET_REQUESTED)
+		|| isPending(state, USERS_ADD_REQUESTED)
+		|| isPending(state, USERS_LOGIN_REQUESTED)
+		|| isPending(state, USERS_LOGOUT_REQUESTED);
+}
+
+const loading = { isAnyFetchLoading, isAnyGoodActionLoading, isAnyCategoryActionLoading, isAnyUserActionLoading };
 
 export { loading };
