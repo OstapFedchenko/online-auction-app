@@ -6,7 +6,11 @@
 ```
 npm i
 ```
-### 2. Start react application:
+### 2. Start mock-server:
+```
+npm run json-server
+```
+### 3. Start react application:
 ```
 npm start
 ```
@@ -14,4 +18,3 @@ npm start
 ## Authors
 
 * **Ostap Fedchenko** - (xzenus2007@rambler.ru)
-
